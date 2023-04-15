@@ -72,13 +72,13 @@ client.connect((err) => {
     });
   });
 
-  app.post("/isAdmin", (req, res) => {
-    const email = req.body.email;
-    console.log(email);
-    adminCollection.find({ email: email }).toArray((err, doctors) => {
-      res.send(doctors.length > 0);
-    });
-  });
+//   app.post("/isAdmin", (req, res) => {
+//     const email = req.body.email;
+//     console.log(email);
+//     adminCollection.find({ email: email }).toArray((err, doctors) => {
+//       res.send(doctors.length > 0);
+//     });
+//   });
 
   app.post("/addService", (req, res) => {
     const file = req.files.file;
